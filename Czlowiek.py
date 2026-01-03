@@ -1,24 +1,25 @@
 # Klasa = Szablon, Przepis
 class Czlowiek:
-# Istota
-gatunek = "Homo Sapiens"
-    def __init__(self):
-    def __init__(self, imie):
-# Konstruktor
-# Akt Istnienia
-        print("Niech powstanie Czlowiek")
+    # Istota
+    # Atrybuty klasy
+    gatunek = "Homo Sapiens"
+
+    def __init__(self, imie, wzrost, plec):
+        # Konstruktor
+        # Akt Istnienia
         print(f"Niech powstanie Czlowiek o imieniu {imie}")
         self.imie = imie
-        # adam.imie = "Adam"
-        # ewa.imie = "Ewa"
+        self.wzrost = wzrost
+        self.plec = plec
+
 
 # Powstawanie obiektu
 # Gotowanie z przepisu
-adam = Czlowiek() # a = 4 # a = int(4)
-print(adam.gatunek)
-adam = Czlowiek("Adam") # a = 4 # a = int(4)
-ewa = Czlowiek("Ewa")
-print(adam.gatunek)
-print(ewa.gatunek)
-print(adam.imie)
-print(ewa.imie)
+
+adam = Czlowiek("adam", 185, "meżczyzna")  # a = 4 # a = int(4)
+ewa = Czlowiek("ewa", 190, "kobieta")
+print(adam.wzrost, adam.imie, adam.plec)
+print(ewa.wzrost, ewa.imie, ewa.plec)
+
+def przedstaw_sie(self, imie, wiek):
+    print(f"Dzien dobry, mam na imie {self.imie}")
