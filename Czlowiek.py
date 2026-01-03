@@ -27,6 +27,7 @@ class Czlowiek:
     def przedstaw(self, osoba):
         print(f"Oto {osoba.imie}")
 
+
 # Powstawanie obiektu (Instancji klasy Czlowiek)
 # (Gotowanie z przepisu)
 adam = Czlowiek("Adam", "M")
@@ -34,4 +35,4 @@ adam = Czlowiek("Adam", "M")
 ewa = Czlowiek("Ewa", "K")
 
 adam.przedstaw_sie()
-ewa.przedstaw(adam)
+ewa.przedstaw()
