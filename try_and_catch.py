@@ -1,10 +1,21 @@
-while True:
+while (True):
+
+    while (True):
+        try:
+            liczba1 = int(input("Podaj liczbe 1: "))
+        except:
+            print("podajemy tylko liczby !!!")
+        else:
+            break
+    while (True):
+        try:
+            liczba2 = int(input("Podaj liczbe 2: "))
+        except:
+            print("podajemy tylko liczby !!!")
+        else:
+            break
     try:
-        liczba1= int(input("Podaj liczbe 1: "))
-        liczba2= int(input("Podaj liczbe 2: "))
         wynik = liczba1 / liczba2
         print(wynik)
-    except  ValueError:
-        print("podajemy tylko liczby !!!")
-    except  ZeroDivisionError:
-        print("Nie dzielimy przez 0 !!!")
+    except ZeroDivisionError:
+        print("nie dzilimy przez 0")
