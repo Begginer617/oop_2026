@@ -1,5 +1,3 @@
-import random
-
 # Klasa = Szablon, Przepis
 class Czlowiek:
     # Istota
@@ -14,11 +12,8 @@ class Czlowiek:
         print(f"Niech powstanie Czlowiek o imieniu {imie}")
         self.imie = imie
         self.plec = plec
-
-    def __add__(self, other):
-        if isinstance(other, Czlowiek) and self.plec != other.plec:
-            return Dziecko(None, random.choice(("M", "K")))
-
+        # adam.imie = "Adam"
+        # ewa.imie = "Ewa"
 
     # Metoda
     # Możność (możliwość), zdolność, umiejętność
@@ -33,16 +28,6 @@ class Czlowiek:
         print(f"Oto {osoba.imie}")
 
 class Dziecko(Czlowiek):
-    def __init__(self, imie, plec):
-        print(f"Powstaje Dziecko o imieniu {imie}")
-        super().__init__(imie, plec)
-
-    def __str__(self):
-        if self.plec=="M":
-            return f"Chłopiec {self.imie}"
-        else:
-            return f"Dziewczynka {self.imie}"
-
     def baw_sie(self):
         print("Ale zabawa, juhuu!!!!")
     def przedstaw_sie(self):
@@ -52,4 +37,16 @@ class Dziecko(Czlowiek):
         else:
             print("dziewczynką")
 
-print (f"Zaimportowano moduł {__name__}")
+# Powstawanie obiektu (Instancji klasy Czlowiek)
+# (Gotowanie z przepisu)
+adam = Czlowiek("Adam", "M")
+# a = 4 # a = int(4)
+ewa = Czlowiek("Ewa", "K")
+kain = Dziecko("Kain", "M")
+ewa.przedstaw_sie()
+kain.baw_sie()
+kain.przedstaw_sie()
+
+print(dir(Czlowiek))
+print(dir(adam))
+print(dir(kain))
