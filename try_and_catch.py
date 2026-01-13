@@ -12,10 +12,15 @@ while (True):
             liczba2 = int(input("Podaj liczbe 2: "))
         except:
             print("podajemy tylko liczby !!!")
-        else:
+        else:  # blok kodu ktory wykonał się poprawnie
             break
+        finally:
+            print("blok finally liczba 2")
     try:
         wynik = liczba1 / liczba2
         print(wynik)
     except ZeroDivisionError:
         print("nie dzilimy przez 0")
+
+
+
