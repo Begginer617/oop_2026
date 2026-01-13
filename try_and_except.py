@@ -23,4 +23,16 @@ while (True):
         print("nie dzilimy przez 0")
 
 
+#
+# Można obsługiwać konkretne typy wyjątków
+# :except ValueError:
+# except ZeroDivisionError:
+# except FileNotFoundError:
+#
+# Można też obsłużyć kilka typów naraz:
+# except (TypeError, ValueError):
+#
+# Można również pobrać obiekt wyjątku:
+# except ValueError as e:
+
 
