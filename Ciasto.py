@@ -4,8 +4,10 @@ class Ciasto:
 
     def __init__(self, nazwa_ciasta, skladniki=None):
         self.nazwa_ciasta = nazwa_ciasta
-        # jeśli nie podasz składników → używa bazy biszkoptu
-        self.skladniki = list(skladniki) if skladniki else list(self.BAZA_BISZKOPTU)
+        if skladniki: # jeśli nie podam składników → używa bazy biszkoptu
+            self.skladniki = list(skladniki)
+        else:
+            self.skladniki = list(self.BAZA_BISZKOPTU)
 
     def dodaj_skladnik(self, skladnik):
         self.skladniki.append(skladnik)
