@@ -43,6 +43,9 @@ class Klasa:
     def __hej(self):
         print("Hej!")
 
+    def dupa(self):
+        print("Dupa!")
+
 obiekt = Klasa()
 obiekt._hello()
 # obiekt.__init__()
